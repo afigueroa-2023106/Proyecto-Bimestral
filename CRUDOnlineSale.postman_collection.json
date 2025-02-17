@@ -1,0 +1,661 @@
+{
+	"info": {
+		"_postman_id": "c0352112-110d-4791-80ff-42911bdd8b71",
+		"name": "CRUDOnlineSale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956970"
+	},
+	"item": [
+		{
+			"name": "CRUDUser",
+			"item": [
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/usuarios/67b2c345146defebbd17c4be",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"usuarios",
+								"67b2c345146defebbd17c4be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/usuarios/67b2c345146defebbd17c4be",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"usuarios",
+								"67b2c345146defebbd17c4be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andre",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Figueroa",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "afigueroa",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "afigueroa-2023106@kinal.edu.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Andre2023106",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "36947503",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v2/usuarios/register",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"usuarios",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzFmNTJkZWYyZTZjYTliNDJiMDUiLCJ1c2VybmFtZSI6ImFmaWd1ZXJvYSIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzk3NjgzMTYsImV4cCI6MTczOTc3OTExNn0.FC6jT8Sti-zNDScjFhTq0FwvsoJnSnGGnOlUbD-yfp4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andre",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Armas",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "afigueroa",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "afigueroa-2023106@kinal.edu.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Andre2023106",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "36947503",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v2/usuarios/67b2b24f608b8fee355fff77",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"usuarios",
+								"67b2b24f608b8fee355fff77"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUDLogin",
+			"item": [
+				{
+					"name": "PutPassword",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjI0ZjYwOGI4ZmVlMzU1ZmZmNzciLCJ1c2VybmFtZSI6ImFmaWd1ZXJvYSIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2NTgzMCwiZXhwIjoxNzM5Nzc2NjMwfQ.dTQZ3UeACzb4uSyaaSPssfhbqXMvAP6R9RuuPdxHCWM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "Andre2023106",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "Andre2025",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v2/usuarios/password/67b2b24f608b8fee355fff77",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"usuarios",
+								"password",
+								"67b2b24f608b8fee355fff77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "parmas",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Andre2023106",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v2/usuarios/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUDProduct",
+			"item": [
+				{
+					"name": "GetProduct",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/productos/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Vanish",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Buen producto",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "medium",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "categoria",
+									"value": "67b2c7917dc7901ce3462421",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v2/productos/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Vanish",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Buen producto",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "medium",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "categoria",
+									"value": "67b2c7917dc7901ce3462421",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v2/productos/67b2c935c10b86388a421b6f",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"productos",
+								"67b2c935c10b86388a421b6f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/productos/67b2c935c10b86388a421b6f",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"productos",
+								"67b2c935c10b86388a421b6f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/productos/67b2c8fac10b86388a421b69",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"productos",
+								"67b2c8fac10b86388a421b69"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUDCategory",
+			"item": [
+				{
+					"name": "GetCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/categoria/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"categoria",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/categoria/67b2c7917dc7901ce3462421",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"categoria",
+								"67b2c7917dc7901ce3462421"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v2/categoria/67b2c713d38466d4a87ac92f",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"categoria",
+								"67b2c713d38466d4a87ac92f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Limpieza",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Productos de limpieza",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v2/categoria/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"categoria",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYzMyNzc4MmRkYjM4OWY2MzljODUiLCJ1c2VybmFtZSI6InBhcm1hcyIsIm5hbWUiOiJBbmRyZSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczOTc2ODYxOSwiZXhwIjoxNzM5Nzc5NDE5fQ.8JPFmmlxrNVs9sbbnTeFdDTx9v2l3QkxEbpin7lCPF8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Limpieza",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Productos de limpieza para el hogar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v2/categoria/67b2c7917dc7901ce3462421",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v2",
+								"categoria",
+								"67b2c7917dc7901ce3462421"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
