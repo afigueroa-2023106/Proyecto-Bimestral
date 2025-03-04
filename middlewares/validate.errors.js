@@ -1,19 +1,27 @@
-import { validationResult } from "express-validator";
+import { validationResult } from "express-validator"
 
-export const validateErrores = (req, res, next)=>{
+export const validateErrors = (req, res, next) => {
     const errors = validationResult(req)
-    if(!errors.isEmpty()){
-        return next(errors)
+    if (!errors.isEmpty()) {
+        const errorMessages = errors.array().map(err => err.msg);
+
+        return res.status(400).send({
+            success: false,
+            message: 'Error with validations',
+            errors: errorMessages
+        })
     }
     next()
 }
-export const validateErrorsWhitoutFiles = (req,res,next)=>{
+
+export const validateErrorsWithoutFiles = (req, res, next)=>{
     const errors = validationResult(req)
+    console.log(validationResult(req))
     if(!errors.isEmpty()){
         return res.status(400).send(
             {
-                succes:false,
-                message: 'Error whit validations',
+                success: false,
+                message: 'Error with validations',
                 errors: errors.errors
             }
         )

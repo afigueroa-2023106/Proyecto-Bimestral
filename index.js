@@ -1,10 +1,7 @@
-//Ejecutar el proyecto (Leventarlo)
-
-      //Desestructurar
-      import { initServer } from './configs/apps.js'
-      import { config } from 'dotenv'
-      import { connect } from './configs/mongo.js'
+import { initServer } from './configs/app.js'
+import { config } from 'dotenv'
+import { connect } from './configs/mongo.js'
       
-      config()
-      connect()
-      initServer()
+config()
+connect()
+initServer()

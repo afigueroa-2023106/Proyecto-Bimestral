@@ -1,5 +1,8 @@
-import mongoose from "mongoose"
+//Conexión a la BD
 
+import mongoose from 'mongoose'
+
+//Función de conexión
 export const connect = async()=>{
     try{
         //Ciclo de vida de Mongo
@@ -22,11 +25,12 @@ export const connect = async()=>{
             console.log('MongoDB | disconnected')
         })
 
+        //Conectarse a la BD
         await mongoose.connect(
             `${process.env.DB_SERVICE}://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
             {
-                maxPoolSize: 50, 
-                serverSelectionTimeoutMS: 5000 
+                maxPoolSize: 50, //Maximo de conexiónes
+                serverSelectionTimeoutMS: 5000 //Tiempo máximo que espera la conexión
             }
         )
     }catch(err){

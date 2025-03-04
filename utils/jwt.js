@@ -1,5 +1,4 @@
-//Generador de token
-'Use strict'
+'use strict'
 
 import jwt from 'jsonwebtoken'
 
@@ -9,7 +8,7 @@ export const generateJwt = async(payload)=>{
             payload,
             process.env.SECRET_KEY,
             {
-                expiresIn: '3h',
+                expiresIn: '5h',
                 algorithm: 'HS256'
             }
         )
